@@ -1,0 +1,74 @@
+/* #5E597D  */
+
+/* OVERRIDE ----------------------------------------------------------------- */
+.navbar-brand {
+    padding: 5px 15px;
+}
+
+.default-color-one {
+    background-color: #5E597D;
+}
+
+
+.navbar-top-links a {
+    color: #ffffff;
+}
+
+
+.page-header {
+    margin: 10px 0 10px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+/* CUSTOMIZATION ------------------------------------------------------------ */
+.extshop-date {
+    text-align: right;
+}
+
+.extshop-number {
+    text-align: center;
+}
+
+.extshop-money,
+.extshop-price {
+    color: darkblue;
+    text-align: right;
+}
+
+.extshop-price-diff {
+    color: darkgreen;
+    text-align: right;
+}
+.autocomplete {
+
+    position: absolute;
+    background-color: #FFFFFF;
+    z-index: 9999;
+    font-size:14px;
+    width: 440px;
+    display: none;
+}
+
+.autocomplete > table > tbody tr > td:hover {
+    background-color: #337ab7;
+    color: #FFFFFF;
+}

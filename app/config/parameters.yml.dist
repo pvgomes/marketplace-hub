@@ -1,0 +1,23 @@
+parameters:
+    database_driver:   %marketplace-hub_database_driver% #pdo_mysql
+    database_host:     %marketplace-hub_database_host%
+    database_port:     %marketplace-hub_database_port%
+    database_name:     %marketplace-hub_database_schema%
+    database_user:     %marketplace-hub_database_user%
+    database_password: %marketplace-hub_database_password%
+
+    locale:            en
+
+    # A secret key that's used to generate certain security-related tokens
+    secret:            %marketplace-hub_secret_token%
+
+    # Log
+    marketplace-hub_log_stash_key: %marketplace-hub_logstash_key%
+    marketplace-hub_log_redis_key: %marketplace-hub_redis_log_key%
+
+    # RabbitMQ
+    marketplace-hub_rabbit_host: %marketplace-hub_rabbit_host%
+    marketplace-hub_rabbit_port: %marketplace-hub_rabbit_port%
+    marketplace-hub_rabbit_user: %marketplace-hub_rabbit_user%
+    marketplace-hub_rabbit_password: %marketplace-hub_rabbit_password%
+    marketplace-hub_rabbit_vhost: %marketplace-hub_rabbit_vhost%

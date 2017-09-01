@@ -1,0 +1,24 @@
+services:
+
+    # QUEUES
+    seller_create_product:
+        class: AppBundle\Application\Product\SellerCreateConsumer
+
+    # REPOSITORIES
+    product_repository:
+         class: Doctrine\ORM\EntityRepository
+         factory_service: doctrine.orm.entity_manager
+         factory_method: getRepository
+         arguments: ["AppBundle\\Infrastructure\\Product\\Product"]
+
+    external_product_repository:
+        class: Doctrine\ORM\EntityRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method: getRepository
+        arguments: ["AppBundle\\Infrastructure\\Product\\ExternalProduct"]
+
+    load_product_repository:
+        class: Doctrine\ORM\EntityRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method: getRepository
+        arguments: ["AppBundle\\Infrastructure\\Product\\LoadProduct"]

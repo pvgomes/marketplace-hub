@@ -1,0 +1,27 @@
+services:
+
+    # REPOSITORIES
+    order_repository:
+        class: Doctrine\ORM\EntityRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method: getRepository
+        arguments: ["AppBundle\\Infrastructure\\Order\\Order"]
+
+    # LISTENERS
+    order.queue.listener:
+        class: AppBundle\Application\Order\QueueListener
+        arguments: ["@service_container"]
+        tags:
+            - { name: kernel.event_listener, event: seller.create.order, method: onSellerCreateOrder }
+
+    order.client.listener:
+        class: AppBundle\Application\Order\ClientListener
+        arguments: ["@service_container"]
+        tags:
+            - { name: kernel.event_listener, event: market.create.order, method: onMarketCreateOrder }
+
+    # CONSUMERS
+    seller_create_order:
+        class: AppBundle\Application\Order\MarketCreateConsumer
+        arguments: ["@service_container"]
+

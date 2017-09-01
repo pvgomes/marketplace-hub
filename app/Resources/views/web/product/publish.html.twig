@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Product List{{ parent() }}{% endblock %}
+
+
+{% block body %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header ex-small">Publicação de Produtos</h2>
+        </div>
+    </div>
+
+
+    <br>
+    <div id="loads">
+        <div class="row">
+            <div class="col-md-12">
+
+
+                <table id="load-report" class="table table-bordered table-striped table-hover table-condensed">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>arquivo</th>
+                        <th>usuário</th>
+                        <th>parceiro</th>
+                        <th>qtd.</th>
+                        <th>status</th>
+                        <th>re-publicação</th>
+                        <th>criado</th>
+                        <th>atualizado</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="6">Nenhuma publicação para este usuário.</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
