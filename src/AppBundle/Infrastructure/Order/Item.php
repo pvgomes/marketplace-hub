@@ -2,4 +2,6 @@
 
 namespace AppBundle\Infrastructure\Order;
 
-class Item extends AppBundle\Domain\Order\Item{}
+use AppBundle\Domain\Order\Item as DomainItem;
+
+class Item extends DomainItem{}

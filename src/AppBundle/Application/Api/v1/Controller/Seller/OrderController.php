@@ -130,26 +130,37 @@ class OrderController extends ApiController
             $commandBus = $this->get("command_bus");
 
             if (! $this->isValidJson($this->loadOrderCreateSellerSchema(), $incomingOrder)) {
-                throw new InvalidJsonFormat(400, $this->getJsonErrors());
+                throw new InvalidJsonFormat(Response::HTTP_BAD_REQUEST, $this->getJsonErrors());
             }
 
-            $createOrderCommand = new CreateOrderCommand($marketKey, $sellerKey, json_decode($orderData, true), Domain\Order\Events::SELLER_CREATE_ORDER);
+            $createOrderCommand = new CreateOrderCommand(
+                $marketKey,
+                $sellerKey,
+                json_decode($orderData, true),
+                Domain\Order\Events::SELLER_CREATE_ORDER);
+
             $orderNumber = $commandBus->execute($createOrderCommand);
 
             $jsonResponse->setData(['orderId' => $orderNumber]);
 
         } catch (InvalidJsonFormat $jsonException) {
             $jsonResponse->setData($jsonException->getMessage());
-            $jsonResponse->setStatusCode(400);
+            $jsonResponse->setStatusCode(Response::HTTP_BAD_REQUEST);
         } catch (InvalidOrderException $invalidOrderException) {
-            $jsonResponse->setData($invalidOrderException->getMessage());
-            $jsonResponse->setStatusCode(400);
+            $jsonResponse->setData([
+                'message' => $invalidOrderException->getMessage()
+            ]);
+            $jsonResponse->setStatusCode(Response::HTTP_BAD_REQUEST);
         } catch (\DomainException $domainException) {
-            $jsonResponse->setData($domainException->getMessage());
-            $jsonResponse->setStatusCode(400);
+            $jsonResponse->setData([
+                'message' => $domainException->getMessage()
+            ]);
+            $jsonResponse->setStatusCode(Response::HTTP_BAD_REQUEST);
         } catch (\Exception $exception) {
-            $jsonResponse->setData('Try again');
-            $jsonResponse->setStatusCode(500);
+            $jsonResponse->setData([
+                'message' => $exception->getMessage()
+            ]);
+            $jsonResponse->setStatusCode(Response::HTTP_BAD_GATEWAY);
         }
 
         return $jsonResponse;

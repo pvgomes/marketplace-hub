@@ -1,47 +1,49 @@
-php:
-  build: ./docker/php
-  links:
-    - mariadb:mariadb
-    - rabbit:rabbit
-  volumes:
-    - .:/var/www/marketplace-hub
-nginx:
-  build: ./docker/nginx
-  ports:
-    - 8080:80
-  links:
-    - php:php
-  volumes_from:
-    - php
-mariadb:
-  image: mariadb
-  ports:
-    - 3306:3306
-  environment:
-    MYSQL_ROOT_PASSWORD: root
-    TERM: linux
-  volumes:
-    - ./docker/volumes/mariadb:/var/lib/mysql
-rabbit:
-  build: ./docker/rabbitmq
-  environment:
-      - RABBITMQ_PASS=marketplace-hub
-  ports:
-    - 5672:5672
-    - 15672:15672
-elk:
-  image: sebp/elk:E1L1K4
-  ports:
-    - 5601:5601
-  environment:
-    TERM: linux
-  volumes:
-    - ./docker/volumes/elk/logstash:/etc/logstash/conf.d
-mockServer:
-  image: php:5.6-cli
-  ports:
-    - 9090:80
-  working_dir: /var/www/marketplace-hub
-  volumes_from:
-    - php
-  command: php -S 0.0.0.0:80 tests/mock/router.php
+version: "2"
+services:
+  php:
+    build: ./docker/php
+    links:
+      - mariadb:mariadb
+      - rabbit:rabbit
+    volumes:
+      - .:/var/www/marketplace-hub
+  nginx:
+    build: ./docker/nginx
+    ports:
+      - 8080:80
+    links:
+      - php:php
+    volumes_from:
+      - php
+  mariadb:
+    image: mariadb
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      TERM: linux
+    volumes:
+      - ./docker/volumes/mariadb:/var/lib/mysql
+  rabbit:
+    build: ./docker/rabbitmq
+    environment:
+        - RABBITMQ_PASS=marketplace-hub
+    ports:
+      - 5672:5672
+      - 15672:15672
+  elk:
+    image: sebp/elk:E1L1K4
+    ports:
+      - 5601:5601
+    environment:
+      TERM: linux
+    volumes:
+      - ./docker/volumes/elk/logstash:/etc/logstash/conf.d
+  mockServer:
+    image: php:5.6-cli
+    ports:
+      - 9090:80
+    working_dir: /var/www/marketplace-hub
+    volumes_from:
+      - php
+    command: php -S 0.0.0.0:80 tests/mock/router.php

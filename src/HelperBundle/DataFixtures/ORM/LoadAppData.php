@@ -70,9 +70,9 @@ class LoadAppData extends AbstractFixture implements OrderedFixtureInterface, Co
                     'updated_at' => '2014-09-30 14:07:47',
                     'category' => 'games',
                     'brand' => 'sony',
-                    'max_price' => '500.00',
-                    'price' => '399,90',
-                    'special_price' => '350,90',
+                    'max_price' => 500.00,
+                    'price' => 399.90,
+                    'special_price' => 350.90,
                     'quantity' => 25,
                     'free_shipping_rule' => NULL,
                     'supplier_id' => '100',
@@ -112,9 +112,9 @@ class LoadAppData extends AbstractFixture implements OrderedFixtureInterface, Co
                 'activated_at' => '2014-05-23 16:48:40',
                 'updated_at' => '2014-09-30 14:07:47',
                 'brand' => 'sony',
-                'max_price' => '99.99',
-                'price' => '99.99',
-                'special_price' => '85.99',
+                'max_price' => 99.00,
+                'price' => 79.90,
+                'special_price' => 85.99,
                 'quantity' => 6,
                 'sprite' => 'mortalx.jpg',
                 'link' => 'mortalx.html',
@@ -153,9 +153,9 @@ class LoadAppData extends AbstractFixture implements OrderedFixtureInterface, Co
                 'updated_at' => '2014-09-30 14:07:47',
                 'category' => 'games',
                 'brand' => 'sony',
-                'max_price' => '500.99',
-                'price' => '485.99',
-                'special_price' => '420.99',
+                'max_price' => 500.99,
+                'price' => 485.99,
+                'special_price' => 420.99,
                 'quantity' => 6,
                 'free_shipping_rule' => NULL,
                 'supplier_id' => '100',
@@ -282,9 +282,6 @@ class LoadAppData extends AbstractFixture implements OrderedFixtureInterface, Co
                 $externalProduct->setStatus(ExternalProduct::STATUS_ACTIVE);
                 $manager->persist($externalProduct);
             }
-
-
-
         }
 
         $manager->flush();

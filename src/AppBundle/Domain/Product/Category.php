@@ -3,6 +3,8 @@
 namespace AppBundle\Domain\Product;
 
 
+use AppBundle\Domain\Core\Market;
+
 class Category
 {
 

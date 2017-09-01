@@ -13,22 +13,22 @@ class CreateOrderHandler implements Handler
 {
 
     /**
-     * @var AppBundle\Domain\Order\OrderRepository
+     * @var \AppBundle\Domain\Order\OrderRepository
      */
     private $orderRepository;
 
     /**
-     * @var AppBundle\Domain\Product\ProductRepository
+     * @var \AppBundle\Domain\Product\ProductRepository
      */
     private $productRepository;
 
     /**
-     * @var AppBundle\Domain\Core\Market
+     * @var \AppBundle\Domain\Core\Market
      */
     private $market;
 
     /**
-     * @var AppBundle\Domain\Core\Seller
+     * @var \AppBundle\Domain\Core\Seller
      */
     private $seller;
 

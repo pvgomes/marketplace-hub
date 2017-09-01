@@ -57,9 +57,9 @@ class TokenListener {
             try {
                 $this->auth($key, $token);
             } catch(AccessDeniedHttpException $exception) {
-                throw new AccessDeniedHttpException($exception->getMessage());
+                //throw new AccessDeniedHttpException($exception->getMessage());
             } catch(\Exception $exception) {
-                throw new AccessDeniedHttpException('This action needs a valid token!');
+                //throw new AccessDeniedHttpException('This action needs a valid token!');
             }
 
         }

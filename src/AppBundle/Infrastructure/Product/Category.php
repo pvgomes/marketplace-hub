@@ -2,4 +2,4 @@
 
 namespace AppBundle\Infrastructure\Product;
 
-class Category extends AppBundle\Domain\Product\Category{}
+class Category extends \AppBundle\Domain\Product\Category{}

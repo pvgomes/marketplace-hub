@@ -1,7 +1,7 @@
 default:
   extensions:
     Behat\WebApiExtension:
-      base_url: http://marketplace-hub.dev:8080
+      base_url: http://nginx
     emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
       renderer: Twig

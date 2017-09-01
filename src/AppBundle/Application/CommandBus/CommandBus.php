@@ -61,6 +61,7 @@ class CommandBus implements Domain\CommandBus
 
         $market = $this->container->get('market_repository')->byKeyName($command->marketKey);
         $seller = $this->container->get('seller_repository')->byKeyName($command->sellerKey);
+
         $handler = new $handlerName($market, $seller);
 
         if (count($command->repositories()) > 0) {
