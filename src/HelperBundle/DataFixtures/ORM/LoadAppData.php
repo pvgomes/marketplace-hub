@@ -171,6 +171,7 @@ class LoadAppData extends AbstractFixture implements OrderedFixtureInterface, Co
     ];
 
     private $sellers = [
+        'Natue',
         'Walmart',
         'Americanas',
         'Extra',

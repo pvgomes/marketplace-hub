@@ -61,14 +61,14 @@
             <div class="canvas-holder">
                 <canvas id="chart-scenarios" width="300" height="300"/>
             </div>
-            0 scenarios failed of 1
+            0 scenarios failed of 3
             scenarios
         </div>
         <div class="col-sm-4">
             <div class="canvas-holder">
                 <canvas id="chart-steps" width="300" height="300"/>
             </div>
-            0 steps failed of 2
+            0 steps failed of 6
         </div>
     </div>
     <hr>
@@ -174,6 +174,170 @@ I need to be able make requests into it</p>
                                                                                                                                                                                                                 </ul>
                                 </div>
                             </div>
+                                                    <div class="panel panel-default passed">
+                                <div class="panel-heading" role="tab">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion"
+                                           href="#scenario-1-2"
+                                           aria-expanded="true"
+                                           aria-controls="scenario-1-2">
+                                            Scenario: Create order
+                                        </a>
+
+                                        <div class="tags pull-right">
+                                                                                            <span class="badge">order</span>
+                                                                                    </div>
+                                    </h4>
+                                </div>
+                                <div id="scenario-1-2" class="panel-collapse collapse in"
+                                     role="tabpanel"
+                                     aria-labelledby="headingOne">
+                                    <ul class="list-group">
+                                                                                    <li class="list-group-item alert alert-success">
+                                                <b>When</b> I send a POST request to &quot;/api/v1/dafiti/walmart/order/create&quot; with body:
+                                                                                                                                                            <p style="padding-left:0.5em; overflow-x:scroll; white-space:nowrap; font-family:monospace">{<br />
+  &quot;orderId&quot; : &quot;MKT-1000121920192&quot;,<br />
+  &quot;items&quot; : [ {<br />
+    &quot;id&quot; : &quot;SPTLUIZA245245&quot;,<br />
+    &quot;quantity&quot; : 1,<br />
+    &quot;price&quot; : 485.99,<br />
+    &quot;commission&quot; : 10,<br />
+    &quot;freightCommission&quot; : 2<br />
+  } ],<br />
+  &quot;clientProfileData&quot; : {<br />
+    &quot;email&quot; : &quot;basilio.jafet@palaciodoscedros.com.br&quot;,<br />
+    &quot;firstName&quot; : &quot;Basílio Jafet Pereira&quot;,<br />
+    &quot;lastName&quot; : &quot;Silva&quot;,<br />
+    &quot;document&quot; : &quot;1234567890&quot;,<br />
+    &quot;phone&quot; : &quot;1234567890&quot;,<br />
+    &quot;corporateName&quot; : &quot;Nami Jafet e Irmãos&quot;,<br />
+    &quot;tradeName&quot; : &quot;Nami Jafet e Irmãos&quot;,<br />
+    &quot;corporateDocument&quot; : &quot;12345678901234567890&quot;,<br />
+    &quot;stateInscription&quot; : &quot;20000516122345&quot;,<br />
+    &quot;corporatePhone&quot; : &quot;1257890&quot;,<br />
+    &quot;isCorporate&quot; : true<br />
+  },<br />
+  &quot;shippingData&quot; : {<br />
+    &quot;address&quot; : {<br />
+      &quot;addressId&quot; : &quot;Minha Casa&quot;,<br />
+      &quot;addressType&quot; : &quot;residential&quot;,<br />
+      &quot;receiverName&quot; : &quot;Adma Jafet&quot;,<br />
+      &quot;postalCode&quot; : &quot;03424-101&quot;,<br />
+      &quot;city&quot; : &quot;São Paulo&quot;,<br />
+      &quot;state&quot; : &quot;SP&quot;,<br />
+      &quot;country&quot; : &quot;BRA&quot;,<br />
+      &quot;street&quot; : &quot;Rua Bom Pastor&quot;,<br />
+      &quot;number&quot; : &quot;800&quot;,<br />
+      &quot;neighborhood&quot; : &quot;Ipiranga&quot;,<br />
+      &quot;complement&quot; : &quot;complement:69&quot;,<br />
+      &quot;reference&quot; : &quot;Próximo ao Museu do Ipiranga&quot;<br />
+    },<br />
+    &quot;logisticsInfo&quot; : [ {<br />
+      &quot;item&quot; : 0,<br />
+      &quot;shippingType&quot; : &quot;Normal&quot;,<br />
+      &quot;shippingLockTTL&quot; : &quot;2d&quot;,<br />
+      &quot;shippingEstimate&quot; : &quot;5d&quot;,<br />
+      &quot;price&quot; : 10.99,<br />
+      &quot;deliveryWindow&quot; : null<br />
+    }, {<br />
+      &quot;item&quot; : 1,<br />
+      &quot;shippingType&quot; : &quot;Normal&quot;,<br />
+      &quot;shippingLockTTL&quot; : &quot;2d&quot;,<br />
+      &quot;shippingEstimate&quot; : &quot;5d&quot;,<br />
+      &quot;price&quot; : 10.99,<br />
+      &quot;deliveryWindow&quot; : null<br />
+    } ]<br />
+  }<br />
+}</p>
+                                                                                                                                                                                                                                                                                                </li>
+                                                                                                                                                                                                                        <li class="list-group-item alert alert-success">
+                                                <b>Then</b> the response code should be 200
+                                                                                                                                                                                                                                                                                                                                                </li>
+                                                                                                                                                                                                                </ul>
+                                </div>
+                            </div>
+                                                    <div class="panel panel-default passed">
+                                <div class="panel-heading" role="tab">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion"
+                                           href="#scenario-1-3"
+                                           aria-expanded="true"
+                                           aria-controls="scenario-1-3">
+                                            Scenario: Create order with another seller
+                                        </a>
+
+                                        <div class="tags pull-right">
+                                                                                            <span class="badge">order</span>
+                                                                                    </div>
+                                    </h4>
+                                </div>
+                                <div id="scenario-1-3" class="panel-collapse collapse in"
+                                     role="tabpanel"
+                                     aria-labelledby="headingOne">
+                                    <ul class="list-group">
+                                                                                    <li class="list-group-item alert alert-success">
+                                                <b>When</b> I send a POST request to &quot;/api/v1/dafiti/natue/order/create&quot; with body:
+                                                                                                                                                            <p style="padding-left:0.5em; overflow-x:scroll; white-space:nowrap; font-family:monospace">{<br />
+  &quot;orderId&quot; : &quot;MKT-1000121920192&quot;,<br />
+  &quot;items&quot; : [ {<br />
+    &quot;id&quot; : &quot;SPTLUIZA245245&quot;,<br />
+    &quot;quantity&quot; : 1,<br />
+    &quot;price&quot; : 485.99,<br />
+    &quot;commission&quot; : 10,<br />
+    &quot;freightCommission&quot; : 2<br />
+  } ],<br />
+  &quot;clientProfileData&quot; : {<br />
+    &quot;email&quot; : &quot;basilio.jafet@palaciodoscedros.com.br&quot;,<br />
+    &quot;firstName&quot; : &quot;Basílio Jafet Pereira&quot;,<br />
+    &quot;lastName&quot; : &quot;Silva&quot;,<br />
+    &quot;document&quot; : &quot;1234567890&quot;,<br />
+    &quot;phone&quot; : &quot;1234567890&quot;,<br />
+    &quot;corporateName&quot; : &quot;Nami Jafet e Irmãos&quot;,<br />
+    &quot;tradeName&quot; : &quot;Nami Jafet e Irmãos&quot;,<br />
+    &quot;corporateDocument&quot; : &quot;12345678901234567890&quot;,<br />
+    &quot;stateInscription&quot; : &quot;20000516122345&quot;,<br />
+    &quot;corporatePhone&quot; : &quot;1257890&quot;,<br />
+    &quot;isCorporate&quot; : true<br />
+  },<br />
+  &quot;shippingData&quot; : {<br />
+    &quot;address&quot; : {<br />
+      &quot;addressId&quot; : &quot;Minha Casa&quot;,<br />
+      &quot;addressType&quot; : &quot;residential&quot;,<br />
+      &quot;receiverName&quot; : &quot;Adma Jafet&quot;,<br />
+      &quot;postalCode&quot; : &quot;03424-101&quot;,<br />
+      &quot;city&quot; : &quot;São Paulo&quot;,<br />
+      &quot;state&quot; : &quot;SP&quot;,<br />
+      &quot;country&quot; : &quot;BRA&quot;,<br />
+      &quot;street&quot; : &quot;Rua Bom Pastor&quot;,<br />
+      &quot;number&quot; : &quot;800&quot;,<br />
+      &quot;neighborhood&quot; : &quot;Ipiranga&quot;,<br />
+      &quot;complement&quot; : &quot;complement:69&quot;,<br />
+      &quot;reference&quot; : &quot;Próximo ao Museu do Ipiranga&quot;<br />
+    },<br />
+    &quot;logisticsInfo&quot; : [ {<br />
+      &quot;item&quot; : 0,<br />
+      &quot;shippingType&quot; : &quot;Normal&quot;,<br />
+      &quot;shippingLockTTL&quot; : &quot;2d&quot;,<br />
+      &quot;shippingEstimate&quot; : &quot;5d&quot;,<br />
+      &quot;price&quot; : 10.99,<br />
+      &quot;deliveryWindow&quot; : null<br />
+    }, {<br />
+      &quot;item&quot; : 1,<br />
+      &quot;shippingType&quot; : &quot;Normal&quot;,<br />
+      &quot;shippingLockTTL&quot; : &quot;2d&quot;,<br />
+      &quot;shippingEstimate&quot; : &quot;5d&quot;,<br />
+      &quot;price&quot; : 10.99,<br />
+      &quot;deliveryWindow&quot; : null<br />
+    } ]<br />
+  }<br />
+}</p>
+                                                                                                                                                                                                                                                                                                </li>
+                                                                                                                                                                                                                        <li class="list-group-item alert alert-success">
+                                                <b>Then</b> the response code should be 200
+                                                                                                                                                                                                                                                                                                                                                </li>
+                                                                                                                                                                                                                </ul>
+                                </div>
+                            </div>
                                             </div>
                 </div>
                         </div>
@@ -208,7 +372,7 @@ I need to be able make requests into it</p>
             label: "Failed"
         },
         {
-            value: 1,
+            value: 3,
             color: "#00a65a",
             highlight: "#5AD3D1",
             label: "Passed"
@@ -223,7 +387,7 @@ I need to be able make requests into it</p>
             label: "Failed"
         },
         {
-            value: 2,
+            value: 6,
             color: "#00a65a",
             highlight: "#5AD3D1",
             label: "Passed"

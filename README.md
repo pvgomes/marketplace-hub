@@ -37,9 +37,21 @@ app/console doctrine:fixtures:load
 ```
 
 **5) Done, access using this url**:
-
+Run behat
 ```
-http://marketplace-hub.dev:8080/
+bin/behat
+```
+Run phpunit
+```
+bin/phpunit -c tests/phpunit.xml
+```
+
+**6) Hosts**:
+```
+Access
+http://marketplace-hub.dev:8080
+
+Api doc
 http://marketplace-hub.dev:8080/api/doc
 
 ELK
@@ -47,5 +59,4 @@ http://localhost:5601/
 
 RabbitMQ
 http://localhost:15672/
-
 ```
