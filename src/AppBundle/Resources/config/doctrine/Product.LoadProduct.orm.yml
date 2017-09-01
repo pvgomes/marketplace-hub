@@ -1,0 +1,69 @@
+AppBundle\Infrastructure\Product\LoadProduct:
+    type: entity
+    table: load_product
+    indexes:
+        IDX_682B00471AD0877:
+            columns:
+                - fk_user
+        IDX_682B0047DBB4BB6C:
+            columns:
+                - fk_seller
+        IDX_682B00474B02ED5B:
+            columns:
+                - fk_market
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        quantity:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        republish:
+            type: boolean
+            nullable: false
+    manyToOne:
+        user:
+            targetEntity: AppBundle\Infrastructure\Core\User
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fk_user:
+                    referencedColumnName: id
+            orphanRemoval: false
+        market:
+            targetEntity: AppBundle\Infrastructure\Core\Market
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fk_market:
+                    referencedColumnName: id
+            orphanRemoval: false
+        seller:
+            targetEntity: AppBundle\Infrastructure\Core\Seller
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fk_seller:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

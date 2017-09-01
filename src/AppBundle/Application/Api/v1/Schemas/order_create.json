@@ -1,0 +1,23 @@
+{
+    "title": "Seller Order",
+    "type": "object",
+    "properties": {
+
+        "orderId": {
+            "type": "string"
+        },
+
+        "items": {
+            "type": "array"
+        },
+
+        "clientProfileData":{
+            "type" : "object"
+        },
+
+        "shippingData" : {
+            "type" : "object"
+        }
+    },
+    "required": ["orderId", "items", "clientProfileData", "shippingData"]
+}

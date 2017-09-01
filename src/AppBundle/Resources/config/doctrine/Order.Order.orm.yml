@@ -1,0 +1,83 @@
+AppBundle\Infrastructure\Order\Order:
+    type: entity
+    repositoryClass: AppBundle\Infrastructure\Order\OrderRepository
+    table: sales_order
+    indexes:
+        IDX_36D222EDBB4BB6C:
+            columns:
+                - fk_seller
+        IDX_36D222E4B02ED5B:
+            columns:
+                - fk_market
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        orderNumber:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: order_number
+        marketOrderNumber:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: market_order_number
+        sellerOrderNumber:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: seller_order_number
+        totalAmount:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 2
+            column: total_amount
+        freightAmount:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 2
+            column: freight_amount
+        rawData:
+            type: text
+            nullable: false
+            length: null
+            options:
+                fixed: false
+            column: raw_data
+    manyToOne:
+        market:
+            targetEntity: AppBundle\Infrastructure\Core\Market
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fk_market:
+                    referencedColumnName: id
+            orphanRemoval: false
+        seller:
+            targetEntity: AppBundle\Infrastructure\Core\Seller
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fk_seller:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

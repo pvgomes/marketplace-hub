@@ -1,0 +1,62 @@
+AppBundle\Infrastructure\Product\Category:
+    type: entity
+    repositoryClass: AppBundle\Infrastructure\Product\CategoryRepository
+    table: category
+    indexes:
+        IDX_64C19C1DBB4BB6C:
+            columns:
+                - fk_market
+    uniqueConstraints:
+        name_market:
+            columns:
+                - name_key
+                - fk_market
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        categoryMarketId:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: category_market_id
+        categoryAttributes:
+            type: array
+            nullable: false
+            length: null
+            options:
+                fixed: false
+            column: category_attributes
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        nameKey:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: name_key
+    manyToOne:
+        market:
+            targetEntity: AppBundle\Infrastructure\Core\Market
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                fk_market:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
