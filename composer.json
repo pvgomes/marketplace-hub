@@ -31,7 +31,7 @@
         "symfony/monolog-bundle":               "2.7.*",
         "symfony/symfony":                      "2.7.*",
         "twig/twig":                            "1.21.*",
-        "winzou/state-machine-bundle":          "0.2.*",
+        "winzou/state-machine-bundle":          "0.2.*"
     },
     "require-dev": {
         "doctrine/data-fixtures":            "1.1.*",
