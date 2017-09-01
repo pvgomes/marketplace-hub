@@ -2,19 +2,19 @@
 
 namespace AppBundle\Domain\Core;
 
-use Domain\Command;
-use Domain\Handler;
+use AppBundle\Domain\Command;
+use AppBundle\Domain\Handler;
 
 class CreateConfigurationHandler implements Handler
 {
 
     /**
-     * @var \Domain\Core\ConfigurationRepository
+     * @var AppBundle\Domain\Core\ConfigurationRepository
      */
     private $configurationRepository;
 
     /**
-     * @var \Domain\Core\Market
+     * @var AppBundle\Domain\Core\Market
      */
     private $market;
 

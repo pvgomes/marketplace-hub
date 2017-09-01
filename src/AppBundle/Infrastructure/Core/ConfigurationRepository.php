@@ -2,7 +2,7 @@
 
 namespace AppBundle\Infrastructure\Core;
 
-use Domain;
+use AppBundle\Domain;
 
 /**
  * Class ConfigurationRepository

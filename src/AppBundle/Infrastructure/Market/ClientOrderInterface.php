@@ -2,7 +2,7 @@
 
 namespace AppBundle\Infrastructure\Market;
 
-use Domain\Order\Order;
+use AppBundle\Domain\Order\Order;
 
 interface ClientOrderInterface
 {

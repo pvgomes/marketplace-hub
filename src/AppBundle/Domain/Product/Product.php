@@ -9,7 +9,7 @@ class Product
     protected $id;
 
     /**
-     * @var \Domain\Core\Market;
+     * @var AppBundle\Domain\Core\Market;
      */
     protected $market;
 
@@ -39,12 +39,12 @@ class Product
     protected $stock;
 
     /**
-     * @var \Domain\Core\Price
+     * @var AppBundle\Domain\Core\Price
      */
     protected $price;
 
     /**
-     * @var \Domain\Core\Price
+     * @var AppBundle\Domain\Core\Price
      */
     protected $specialPrice;
 
@@ -71,7 +71,7 @@ class Product
     }
 
     /**
-     * @return \Domain\Core\Market
+     * @return AppBundle\Domain\Core\Market
      */
     public function getMarket()
     {
@@ -79,7 +79,7 @@ class Product
     }
 
     /**
-     * @param \Domain\Core\Market $market
+     * @param AppBundle\Domain\Core\Market $market
      */
     public function setMarket($market)
     {
@@ -167,7 +167,7 @@ class Product
     }
 
     /**
-     * @return \Domain\Core\Price
+     * @return AppBundle\Domain\Core\Price
      */
     public function getPrice()
     {
@@ -175,7 +175,7 @@ class Product
     }
 
     /**
-     * @param \Domain\Core\Price $price
+     * @param AppBundle\Domain\Core\Price $price
      */
     public function setPrice($price)
     {
@@ -183,7 +183,7 @@ class Product
     }
 
     /**
-     * @return \Domain\Core\Price
+     * @return AppBundle\Domain\Core\Price
      */
     public function getSpecialPrice()
     {
@@ -191,7 +191,7 @@ class Product
     }
 
     /**
-     * @param \Domain\Core\Price $specialPrice
+     * @param AppBundle\Domain\Core\Price $specialPrice
      */
     public function setSpecialPrice($specialPrice)
     {

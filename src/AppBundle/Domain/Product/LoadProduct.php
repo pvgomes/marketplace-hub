@@ -12,18 +12,18 @@ class LoadProduct
     protected $id;
 
     /**
-     * @var \Domain\Core\User
+     * @var AppBundle\Domain\Core\User
      *
      */
     protected $user;
 
     /**
-     * @var \Domain\Core\Seller
+     * @var AppBundle\Domain\Core\Seller
      */
     protected $seller;
 
     /**
-     * @var \Domain\Core\Market
+     * @var AppBundle\Domain\Core\Market
      */
     protected $market;
 
@@ -75,7 +75,7 @@ class LoadProduct
     }
 
     /**
-     * @return \Domain\Core\User
+     * @return AppBundle\Domain\Core\User
      */
     public function getUser()
     {
@@ -83,7 +83,7 @@ class LoadProduct
     }
 
     /**
-     * @param \Domain\Core\User $user
+     * @param AppBundle\Domain\Core\User $user
      */
     public function setUser($user)
     {
@@ -91,7 +91,7 @@ class LoadProduct
     }
 
     /**
-     * @return \Domain\Core\Seller
+     * @return AppBundle\Domain\Core\Seller
      */
     public function getSeller()
     {
@@ -99,7 +99,7 @@ class LoadProduct
     }
 
     /**
-     * @param \Domain\Core\Seller $seller
+     * @param AppBundle\Domain\Core\Seller $seller
      */
     public function setSeller($seller)
     {
@@ -107,7 +107,7 @@ class LoadProduct
     }
 
     /**
-     * @return \Domain\Core\Market
+     * @return AppBundle\Domain\Core\Market
      */
     public function getMarket()
     {
@@ -115,7 +115,7 @@ class LoadProduct
     }
 
     /**
-     * @param \Domain\Core\Market $market
+     * @param AppBundle\Domain\Core\Market $market
      */
     public function setMarket($market)
     {

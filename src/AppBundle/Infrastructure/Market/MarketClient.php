@@ -8,9 +8,9 @@
 
 namespace AppBundle\Infrastructure\Market;
 
-use Domain\Order\InvalidOrderException;
+use AppBundle\Domain\Order\InvalidOrderException;
 use GuzzleHttp\Client;
-use Domain\Order\Order;
+use AppBundle\Domain\Order\Order;
 
 class MarketClient implements ClientOrderInterface, ClientProductInterface
 {

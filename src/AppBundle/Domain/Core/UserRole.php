@@ -1,6 +1,7 @@
 <?php
 namespace AppBundle\Domain\Core;
 
+use AppBundle\Domain\Core\User;
 
 class UserRole
 {

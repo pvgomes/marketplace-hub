@@ -8,6 +8,6 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 
-class Product extends \Domain\Product\Product
+class Product extends AppBundle\Domain\Product\Product
 {
 }

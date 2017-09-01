@@ -2,4 +2,6 @@
 
 namespace AppBundle\Infrastructure\Core;
 
-class Seller extends \Domain\Core\Seller{}
+use AppBundle\Domain\Core\Seller as CoreSeller;
+
+class Seller extends CoreSeller{}

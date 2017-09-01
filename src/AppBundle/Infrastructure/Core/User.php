@@ -4,8 +4,9 @@ namespace AppBundle\Infrastructure\Core;
 
 
 use Symfony\Component\Security\Core\User\UserInterface;
+use AppBundle\Domain\Core\User as UserCore;
 
-class User extends \Domain\Core\User implements UserInterface, \Serializable
+class User extends UserCore implements UserInterface, \Serializable
 {
 
 }

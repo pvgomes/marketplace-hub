@@ -5,7 +5,7 @@ namespace AppBundle\Infrastructure\Product;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use AppBundle\Infrastructure\Core\EntityRepository;
 use AppBundle\Infrastructure;
-use \Domain;
+ use AppBundle\Domain;
 
 class CategoryRepository extends EntityRepository implements Domain\Product\CategoryRepository
 {

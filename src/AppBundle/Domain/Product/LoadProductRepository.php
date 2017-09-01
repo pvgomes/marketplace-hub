@@ -2,7 +2,7 @@
 
 namespace AppBundle\Domain\Product;
 
-use Domain;
+use AppBundle\Domain;
 
 interface LoadProductRepository extends Domain\Core\RepositoryInterface
 {

@@ -2,6 +2,8 @@
 
 namespace AppBundle\Infrastructure\Core;
 
-class Configuration extends \Domain\Core\Configuration
+use AppBundle\Domain\Core\Configuration as CoreConfiguration;
+
+class Configuration extends CoreConfiguration
 {
 }

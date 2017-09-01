@@ -2,7 +2,7 @@
 
 namespace AppBundle\Infrastructure\Order;
 
-class ItemStatus extends \Domain\Order\ItemStatus
+class ItemStatus extends AppBundle\Domain\Order\ItemStatus
 {
     const STATUS_PARTNER_CREATE_ORDER = 'market-create-order';
     const STATUS_VENTURE_CREATE_WAITING = 'seller-create-waiting';

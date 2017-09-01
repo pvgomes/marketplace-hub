@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Behat Tests</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="assets/Twig/css/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="assets/Twig/js/Chart.min.js"></script>
+</head>
+<body role="document" style="margin-top: 70px;">
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Behat report</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container theme-showcase" role="main">
+    <div class="row charts">
+        <div class="col-sm-4">
+            <div class="canvas-holder">
+                <canvas id="chart-features" width="300" height="300"/>
+            </div>
+            1 features failed of 1
+            features
+        </div>
+        <div class="col-sm-4">
+            <div class="canvas-holder">
+                <canvas id="chart-scenarios" width="300" height="300"/>
+            </div>
+            1 scenarios failed of 1
+            scenarios
+        </div>
+        <div class="col-sm-4">
+            <div class="canvas-holder">
+                <canvas id="chart-steps" width="300" height="300"/>
+            </div>
+            1 steps failed of 1
+        </div>
+    </div>
+    <hr>
+    <div class="filters">
+        <a class="btn btn-default" id="feature-all-filter" role="button">All</a>
+        <a class="btn btn-success" id="feature-passed-filter" role="button">Passed</a>
+        <a class="btn btn-danger" id="feature-failed-filter" role="button">Failed</a>
+    </div>
+    <hr>
+    <div id="feature-overview">
+                    <div class="row">
+                <div class="col-sm-12">
+                    <h2>Suite: api</h2>
+
+                    <div class="row">
+                                                    <div class="col-sm-4 feature" data-id="feature-1">
+                                <div class="card failed">
+                                    <div class="header">
+                                        <h2>Feature: Application</h2>
+                                    </div>
+                                    <div class="info">
+                                        <p>In order to access the application<br />
+As a client<br />
+I need to be able make requests into it</p>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="tags">
+                                                                                    </div>
+                                                                                    <div class="progress">
+
+                                                <div class="progress-bar progress-bar-green" role="progressbar"
+                                                     style="width: 0%">
+                                                    <span class="sr-only">40% Complete (success)</span>
+                                                </div>
+                                                <div class="progress-bar progress-bar-red" role="progressbar"
+                                                     style="width: 100%">
+                                                    <span class="sr-only">40% Complete (success)</span>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                </div>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+            <hr>
+            </div>
+    <div id="scenario-overview" class="row">
+                                    <div class="feature" data-id="feature-1">
+                    <div class="col-sm-4">
+                        <div class="card failed">
+                            <div class="header">
+                                <h2>Feature: Application</h2>
+                            </div>
+                            <div class="info">
+                                <p>In order to access the application<br />
+As a client<br />
+I need to be able make requests into it</p>
+                            </div>
+                            <div class="footer">
+                                <div class="tags">
+                                                                    </div>
+                                                                    <div class="progress">
+
+                                        <div class="progress-bar progress-bar-green" role="progressbar"
+                                             style="width: 0%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                        <div class="progress-bar progress-bar-red" role="progressbar"
+                                             style="width: 100%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 details panel-group" role="tablist" aria-multiselectable="true">
+                                                    <div class="panel panel-default failed">
+                                <div class="panel-heading" role="tab">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion"
+                                           href="#scenario-1-1"
+                                           aria-expanded="true"
+                                           aria-controls="scenario-1-1">
+                                            Scenario: Request endpoint without required headers
+                                        </a>
+
+                                        <div class="tags pull-right">
+                                                                                            <span class="badge">application</span>
+                                                                                    </div>
+                                    </h4>
+                                </div>
+                                <div id="scenario-1-1" class="panel-collapse collapse in"
+                                     role="tabpanel"
+                                     aria-labelledby="headingOne">
+                                    <ul class="list-group">
+                                                                                    <li class="list-group-item alert alert-danger">
+                                                <b>When</b> I send a GET request to &quot;/api/v1/ping&quot;
+                                                                                                                                                                                                                                                        <br>
+                                                    <p style="padding-left:2em ; color:gray">(cURL error 7: couldn&#039;t connect to host)</p>
+                                                                                                                                                                                            </li>
+                                                                                                                                                                                                                        <li class="list-group-item alert alert-info">
+                                                <b>Then</b> the response code should be 200
+                                                                                                                                                                                                                                                                                                                                                </li>
+                                                                                                                                                                                                                </ul>
+                                </div>
+                            </div>
+                                            </div>
+                </div>
+                        </div>
+</div>
+<!-- /container -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    var featureData = [
+        {
+            value: 1,
+            color: "#F7464A",
+            highlight: "#FF5A5E",
+            label: "Failed"
+        },
+        {
+            value: 0,
+            color: "#00a65a",
+            highlight: "#5AD3D1",
+            label: "Passed"
+        },
+    ];
+
+    var scenarioData = [
+        {
+            value: 1,
+            color: "#F7464A",
+            highlight: "#FF5A5E",
+            label: "Failed"
+        },
+        {
+            value: 0,
+            color: "#00a65a",
+            highlight: "#5AD3D1",
+            label: "Passed"
+        },
+    ];
+
+    var stepData = [
+        {
+            value: 1,
+            color: "#F7464A",
+            highlight: "#FF5A5E",
+            label: "Failed"
+        },
+        {
+            value: 0,
+            color: "#00a65a",
+            highlight: "#5AD3D1",
+            label: "Passed"
+        },
+    ];
+
+    window.onload = function () {
+        var featureChart = document.getElementById("chart-features").getContext("2d");
+        var scenarioChart = document.getElementById("chart-scenarios").getContext("2d");
+        var stepChart = document.getElementById("chart-steps").getContext("2d");
+        new Chart(featureChart).Doughnut(featureData);
+        new Chart(scenarioChart).Doughnut(scenarioData);
+        new Chart(stepChart).Doughnut(stepData);
+    };
+</script>
+<script type="text/javascript">
+    function showOverview() {
+        $("#feature-overview").show();
+        $("#scenario-overview").hide();
+    }
+    function showDetails() {
+        $("#feature-overview").hide();
+        $("#scenario-overview").show();
+    }
+    function showFeatureDetail(featureId) {
+        $("#scenario-overview .feature").hide();
+        $("#scenario-overview .feature[data-id='" + featureId + "']").show();
+    }
+    $(function () {
+        $('.collapse').collapse();
+
+        $('.filters').click()
+        {
+            showOverview();
+        }
+
+        $('.filters #feature-failed-filter').click(function () {
+            showOverview();
+            $('.feature').hide();
+            $('.card.failed').parent().show();
+        });
+        $('.filters #feature-passed-filter').click(function () {
+            showOverview();
+            $('.feature').hide();
+            $('.card.passed').parent().show();
+        });
+        $('.filters #feature-all-filter').click(function () {
+            showOverview();
+            $('.feature').show();
+        });
+    });
+
+    $(function () {
+        $(".feature").click(function () {
+            var featureId = $(this).data("id");
+            showDetails();
+            showFeatureDetail(featureId);
+        });
+    });
+</script>
+</body>
+</html>

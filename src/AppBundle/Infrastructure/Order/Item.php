@@ -2,4 +2,4 @@
 
 namespace AppBundle\Infrastructure\Order;
 
-class Item extends \Domain\Order\Item{}
+class Item extends AppBundle\Domain\Order\Item{}

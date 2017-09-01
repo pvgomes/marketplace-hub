@@ -2,7 +2,7 @@
 
 namespace AppBundle\Domain\Order;
 
-use Domain\Core;
+use AppBundle\Domain\Core;
 
 class Order
 {
@@ -22,12 +22,12 @@ class Order
     protected $rawData;
 
     /**
-     * @var \Domain\Core\Market
+     * @var AppBundle\Domain\Core\Market
      */
     protected $market;
 
     /**
-     * @var \Domain\Core\Seller
+     * @var AppBundle\Domain\Core\Seller
      */
     protected $seller;
 

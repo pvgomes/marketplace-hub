@@ -2,33 +2,33 @@
 
 namespace AppBundle\Domain\Order;
 
-use Domain\Command;
-use Domain\Core\Market;
-use Domain\Core\Seller;
-use Domain\Handler;
-use Domain\Product\Product;
-use Domain\Product\ProductRepository;
+use AppBundle\Domain\Command;
+use AppBundle\Domain\Core\Market;
+use AppBundle\Domain\Core\Seller;
+use AppBundle\Domain\Handler;
+use AppBundle\Domain\Product\Product;
+use AppBundle\Domain\Product\ProductRepository;
 
 class CreateOrderHandler implements Handler
 {
 
     /**
-     * @var \Domain\Order\OrderRepository
+     * @var AppBundle\Domain\Order\OrderRepository
      */
     private $orderRepository;
 
     /**
-     * @var \Domain\Product\ProductRepository
+     * @var AppBundle\Domain\Product\ProductRepository
      */
     private $productRepository;
 
     /**
-     * @var \Domain\Core\Market
+     * @var AppBundle\Domain\Core\Market
      */
     private $market;
 
     /**
-     * @var \Domain\Core\Seller
+     * @var AppBundle\Domain\Core\Seller
      */
     private $seller;
 

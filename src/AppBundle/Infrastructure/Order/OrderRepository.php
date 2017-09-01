@@ -4,7 +4,7 @@ namespace AppBundle\Infrastructure\Order;
 
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use AppBundle\Infrastructure\Core\EntityRepository;
-use \Domain;
+ use AppBundle\Domain;
 
 class OrderRepository extends EntityRepository implements Domain\Order\OrderRepository
 {

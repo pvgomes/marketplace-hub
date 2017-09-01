@@ -3,7 +3,7 @@
 namespace AppBundle\Infrastructure\Core;
 
 use AppBundle\Infrastructure;
-use \Domain as Domain;
+ use AppBundle\Domain as Domain;
 
 class MarketRepository extends EntityRepository implements Domain\Core\MarketRepository
 {

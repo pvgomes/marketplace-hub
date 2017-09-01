@@ -3,7 +3,7 @@
 namespace AppBundle\Infrastructure\Core;
 
 use AppBundle\Infrastructure;
-use \Domain;
+ use AppBundle\Domain;
 
 class SellerRepository extends EntityRepository implements Domain\Core\SellerRepository
 {

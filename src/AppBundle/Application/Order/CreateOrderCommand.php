@@ -4,7 +4,7 @@ namespace AppBundle\Application\Order;
 
 use AppBundle\Infrastructure\Order\Item;
 use AppBundle\Infrastructure\Order\Order;
-use Domain;
+use AppBundle\Domain;
 
 class CreateOrderCommand implements Domain\Command
 {

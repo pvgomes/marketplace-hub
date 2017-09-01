@@ -2,4 +2,4 @@
 
 namespace AppBundle\Infrastructure\Order;
 
-class ItemStatusHistory extends \Domain\Order\ItemStatusHistory{}
+class ItemStatusHistory extends AppBundle\Domain\Order\ItemStatusHistory{}

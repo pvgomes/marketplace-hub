@@ -11,12 +11,12 @@ class ExternalProduct
     protected $id;
 
     /**
-     * @var \Domain\Core\Seller
+     * @var AppBundle\Domain\Core\Seller
      */
     protected $seller;
 
     /**
-     * @var \Domain\Product\Product
+     * @var AppBundle\Domain\Product\Product
      */
     protected $product;
 
@@ -52,7 +52,7 @@ class ExternalProduct
     }
 
     /**
-     * @return \Domain\Core\Seller
+     * @return AppBundle\Domain\Core\Seller
      */
     public function getSeller()
     {
@@ -60,7 +60,7 @@ class ExternalProduct
     }
 
     /**
-     * @param \Domain\Core\Seller $seller
+     * @param AppBundle\Domain\Core\Seller $seller
      */
     public function setSeller($seller)
     {

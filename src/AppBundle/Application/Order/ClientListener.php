@@ -28,7 +28,7 @@ class ClientListener
         try {
             $orderRepository = $this->serviceContainer->get('order_repository');
             $command = $event->getCommand();
-            /** @var \Domain\Order\Order $order */
+            /** @var AppBundle\Domain\Order\Order $order */
             $order = $orderRepository->get($command->orderId);
             $configuration = $order->getMarket()->getConfiguration();
             /** @var \AppBundle\Infrastructure\Market\ClientOrderInterface $marketClient */

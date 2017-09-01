@@ -26,7 +26,7 @@ class SystemController extends Controller
     {
         /** @var \AppBundle\Application\CommandBus\CommandBus $commandBus */
         $commandBus = $this->get("command_bus");
-        /** @var \Domain\Core\ConfigurationRepository $configurationRepository */
+        /** @var AppBundle\Domain\Core\ConfigurationRepository $configurationRepository */
         $configurationRepository = $this->get("configuration_repository");
         $data = array();
         $form = $this->createFormBuilder($data)
@@ -88,7 +88,7 @@ class SystemController extends Controller
      */
     public function accountAction(Request $request)
     {
-        /** @var \Domain\Core\User $user */
+        /** @var AppBundle\Domain\Core\User $user */
         $user = $this->getUser();
 
         $form = $this->createForm(new UserForm(), $user);

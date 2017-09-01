@@ -36,8 +36,9 @@
     "require-dev": {
         "doctrine/data-fixtures":            "1.1.*",
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
-        "behat/behat": "3.*",
-        "dafiti/web-api-extension": "0.1.0",
+        "behat/behat":                       "3.*",
+        "dafiti/web-api-extension":          "0.1.0",
+        "emuse/behat-html-formatter":        "^0.1.0",
         "phpunit/phpunit":                   "4.8.*",
         "respect/rest":                      "^0.6.0"
     },

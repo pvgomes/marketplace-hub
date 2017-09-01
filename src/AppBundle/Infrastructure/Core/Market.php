@@ -2,7 +2,10 @@
 
 namespace AppBundle\Infrastructure\Core;
 
-class Market extends \Domain\Core\Market{
+use AppBundle\Domain\Core\Market as CoreMarket;
+
+class Market extends CoreMarket
+{
 
     // @TODO: THINK ABOUT GOOD STRATEGY FOR THIS CONFIGURATION GETS
     public function getConfiguration()

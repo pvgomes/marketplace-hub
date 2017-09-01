@@ -19,7 +19,7 @@ class ApplicationEvent extends Event
      */
     private $message;
     /**
-     * @var \Domain\Command
+     * @var Command
      */
     private $command;
     /**

@@ -4,7 +4,7 @@ namespace AppBundle\Application\Core;
 
 use AppBundle\Infrastructure\Core\Configuration;
 
-use Domain;
+use AppBundle\Domain;
 
 class CreateConfigurationCommand implements Domain\Command
 {

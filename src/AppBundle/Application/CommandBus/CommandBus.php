@@ -4,7 +4,7 @@ namespace AppBundle\Application\CommandBus;
 
 use AppBundle\Application\ApplicationEvent;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Domain;
+use AppBundle\Domain;
 
 class CommandBus implements Domain\CommandBus
 {

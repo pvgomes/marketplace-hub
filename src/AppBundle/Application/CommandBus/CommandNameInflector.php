@@ -2,7 +2,7 @@
 
 namespace AppBundle\Application\CommandBus;
 
-use Domain\Command;
+use AppBundle\Domain\Command;
 
 class CommandNameInflector {
 

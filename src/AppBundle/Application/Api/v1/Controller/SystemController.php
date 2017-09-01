@@ -2,9 +2,7 @@
 
 namespace AppBundle\Application\Api\v1\Controller;
 
-use AppBundle\Application\AppEvents;
 use AppBundle\Application\Core\CreateConfigurationCommand;
-use AppBundle\Domain\Order\OrderContext;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -76,14 +74,14 @@ class SystemController extends ApiController implements TokenAuthentication
 
             $createConfigurationCommand = new CreateConfigurationCommand($marketKey, $requestContent->key, $requestContent->value);
             $commandBus->execute($createConfigurationCommand);
-            $jsonResponse->setStatusCode(204);
+            $jsonResponse->setStatusCode(Response::HTTP_NO_CONTENT);
         } catch (\DomainException $exception) {
             $contentError['description'] = $exception->getMessage();
-            $jsonResponse->setStatusCode(400);
+            $jsonResponse->setStatusCode(Response::HTTP_BAD_REQUEST);
             $jsonResponse->setData($contentError);
         } catch (\Exception $exception) {
             $contentError['description'] = "Cagou :(";
-            $jsonResponse->setStatusCode(500);
+            $jsonResponse->setStatusCode(Response::HTTP_BAD_GATEWAY);
             $jsonResponse->setData($contentError);
         }
 

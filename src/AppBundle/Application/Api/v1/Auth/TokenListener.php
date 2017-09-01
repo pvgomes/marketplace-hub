@@ -2,8 +2,8 @@
 namespace AppBundle\Application\Api\v1\Auth;
 
 use Doctrine\ORM\EntityRepository;
-use Domain\Core\MarketRepository;
-use Domain\Core\SellerRepository;
+use AppBundle\Domain\Core\MarketRepository;
+use AppBundle\Domain\Core\SellerRepository;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;

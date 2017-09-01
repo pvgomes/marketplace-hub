@@ -2,7 +2,7 @@
 
 namespace AppBundle\Infrastructure\Product;
 
-class ExternalProduct extends \Domain\Product\ExternalProduct
+class ExternalProduct extends AppBundle\Domain\Product\ExternalProduct
 {
     const STATUS_NEW = 'new';
     const STATUS_ACTIVE = 'active';

@@ -2,6 +2,8 @@
 
 namespace AppBundle\Domain\Core;
 
+use AppBundle\Domain\Core\User;
+
 interface UserRepository extends RepositoryInterface
 {
     /**

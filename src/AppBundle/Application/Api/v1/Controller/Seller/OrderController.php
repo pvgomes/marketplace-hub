@@ -14,7 +14,7 @@ use AppBundle\Application\Exception\InvalidOrderException;
 use AppBundle\Application\Api\ApiController;
 use AppBundle\Application\Api\v1\Validator\JsonValidator;
 
-use Domain;
+use AppBundle\Domain;
 
 class OrderController extends ApiController
 {

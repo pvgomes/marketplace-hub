@@ -2,9 +2,9 @@
 
 namespace AppBundle\Domain\Order;
 
-use Domain;
-use Domain\Core\Market;
-use Domain\Core\Seller;
+use AppBundle\Domain;
+use AppBundle\Domain\Core\Market;
+use AppBundle\Domain\Core\Seller;
 
 
 interface OrderRepository extends Domain\Core\RepositoryInterface

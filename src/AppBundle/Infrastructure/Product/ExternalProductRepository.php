@@ -4,7 +4,7 @@ namespace AppBundle\Infrastructure\Product;
 
 use AppBundle\Infrastructure\Core\EntityRepository;
 use AppBundle\Infrastructure\Core\Market;
-use \Domain;
+ use AppBundle\Domain;
 
 
 class ExternalProductRepository extends EntityRepository implements Domain\Product\ExternalProductRepository
