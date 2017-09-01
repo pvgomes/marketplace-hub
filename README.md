@@ -2,6 +2,7 @@ Marketplace-hub
 ============
 A simple demo of an Marketplace Hub
 
+[![Build Status](https://travis-ci.org/pvgomes/marketplace-hub.svg?branch=master)](https://travis-ci.org/pvgomes/marketplace-hub)
 
 ## Project configuration
 
