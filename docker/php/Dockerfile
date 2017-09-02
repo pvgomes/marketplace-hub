@@ -6,4 +6,10 @@ FROM pvgomes/php:5.6
 
 COPY ./supervisor-consumers.conf /etc/supervisor/conf.d/
 
+supervisord
+supervisorctl restart all
+
+RUN supervisord \
+    && supervisorctl restart all
+
 ENTRYPOINT ["php5-fpm", "--nodaemonize"]

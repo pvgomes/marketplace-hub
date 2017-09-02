@@ -1,6 +1,6 @@
 Marketplace-hub
 ============
-A simple demo of an Marketplace Hub
+A simple demo of a Marketplace Hub
 
 [![Build Status](https://travis-ci.org/pvgomes/marketplace-hub.svg?branch=master)](https://travis-ci.org/pvgomes/marketplace-hub)
 
@@ -59,4 +59,9 @@ http://localhost:5601/
 
 RabbitMQ
 http://localhost:15672/
+```
+
+**7) Consumers**:
+```
+app/console rabbitmq:consumer -w seller_create_order
 ```
