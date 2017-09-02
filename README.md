@@ -60,3 +60,8 @@ http://localhost:5601/
 RabbitMQ
 http://localhost:15672/
 ```
+
+**7) Consumers**:
+```
+app/console rabbitmq:consumer -w seller_create_order
+```

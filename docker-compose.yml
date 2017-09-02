@@ -43,7 +43,7 @@ services:
     image: php:5.6-cli
     ports:
       - 9090:80
-    working_dir: /var/www/marketplace-hub
+    working_dir: /var/www/marketplace-hub/
     volumes_from:
       - php
     command: php -S 0.0.0.0:80 tests/mock/router.php
